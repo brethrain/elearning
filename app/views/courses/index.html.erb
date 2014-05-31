@@ -15,7 +15,7 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-         <td><%= course.date %></td>
+         <td><%= course.date.strftime("%m/%d/%Y, %I:%M%p") %></td>
         <td><%= course.name %></td>
         <td><%= course.description %></td>
         <td><%= course.trainer %></td>

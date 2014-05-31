@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Date:</strong>
-  <%= @course.date %>
+  <%= @course.date.strftime("%m/%d/%Y, %I:%M%p") %>
 </p>
 <p>
   <strong>Course:</strong>
@@ -16,6 +16,9 @@
 <p>
   <strong>Trainer:</strong>
   <%= @course.trainer %>
+</p>
+<p>
+<%= link_to("Suport de curs", @course.picture_url) if @course.picture.present? %>
 </p>
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
