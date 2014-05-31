@@ -10,6 +10,12 @@
       </ul>
     </div>
   <% end %>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_field :date %>
+  </div>
+
+
 
   <div class="field">
     <%= f.label :name %><br>
@@ -20,7 +26,11 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br>
+    <%= f.label :trainer %><br>
+    <%= f.text_field :trainer %>
+  </div>
+    <div class="field">
+    <%= f.label :supporting_materials %><br>
     <%= f.text_field :picture %>
   </div>
   <div class="actions">

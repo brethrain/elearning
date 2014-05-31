@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => redirect('/courses')
   resources :courses
 
   # The priority is based upon order of creation: first created -> highest priority.

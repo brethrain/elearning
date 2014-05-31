@@ -3,19 +3,22 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Picture</th>
-      <th colspan="3"></th>
+      <th> Date </th>
+      <th> Course </th>
+      <th> Class Description</th>
+      <th> Trainer</th>
+      <th> Supporting materials</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @courses.each do |course| %>
       <tr>
+         <td><%= course.date %></td>
         <td><%= course.name %></td>
         <td><%= course.description %></td>
-        <td><%= course.picture %></td>
+        <td><%= course.trainer %></td>
         <td><%= link_to 'Show', course %></td>
         <td><%= link_to 'Edit', edit_course_path(course) %></td>
         <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
