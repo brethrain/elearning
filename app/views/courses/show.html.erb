@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 <p>
+ 
+ <%= image_tag(@course.photo_url, :width => 300) if @course.photo.present? %>
+</p>
+<p>
   <strong>Date:</strong>
   <%= @course.date.strftime("%m/%d/%Y, %I:%M%p") %>
 </p>
